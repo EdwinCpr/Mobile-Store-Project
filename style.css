@@ -55,6 +55,19 @@ button {
     color: rgb(125, 195, 236);
 }
 
+.padding-05 {
+    padding: 0.5rem 0;
+}
+
+.border-bottom {
+    border-bottom: 1px solid;
+}
+
+.d-block {
+    display: block;
+    width: 100%;
+}
+
 /***************** Navegation ***************/
 
 header {
@@ -89,6 +102,19 @@ nav {
     align-items: flex-end;
 }
 
+.box-menu {
+    background-color: gray;
+    padding: 1rem 2rem;
+    position: absolute;
+    left: 0%;
+    right: 45%;
+    top: 0;
+}
+
+.x {
+    text-align: right;
+}
+
 /*********************** Filter *************************/
 
 #filter {
@@ -101,7 +127,7 @@ nav {
 #input-filter {
     width: 100%;
     outline: none;
-    padding: 0rem 3rem;
+    padding: 0rem 2.5rem;
 }
 
 .btn {
