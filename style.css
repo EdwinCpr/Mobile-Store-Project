@@ -68,6 +68,18 @@ button {
     width: 100%;
 }
 
+.text-align-left {
+    text-align: left;
+}
+
+.margintop-1 {
+    margin-top: 1rem;
+}
+
+.hidden-one {
+    display: none;
+}
+
 /***************** Navegation ***************/
 
 header {
@@ -84,6 +96,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .flex-title {
@@ -103,12 +116,16 @@ nav {
 }
 
 .box-menu {
-    background-color: gray;
-    padding: 1rem 2rem;
+    background-color: #fff;
+    padding: 1.5rem 2rem;
     position: absolute;
     left: 0%;
     right: 45%;
     top: 0;
+}
+
+.option-menu {
+    text-align: left;
 }
 
 .x {
