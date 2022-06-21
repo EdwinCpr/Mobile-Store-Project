@@ -18,13 +18,13 @@
         width: 2.5rem;
     }
 
-    /****************** Navegation ********************/
-
-    .nav-menu {
-        display: none;
+    .car-option {
+        left: 98rem;
     }
 
-    .nav-title {
+    /****************** Navegation ********************/
+
+    .flex-title {
         padding-left: 2rem;
     }
 
@@ -35,6 +35,10 @@
 
     .flex-icon {
         gap: 0;
+    }
+
+    .box-menu {
+        right: 75%;
     }
 
     /********************** Filter ***********************/

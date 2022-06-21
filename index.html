@@ -19,7 +19,7 @@
                         <button onclick="navToggle()"><img src="./images/menu 1.svg" alt="" class="icon-width"></button>
                     </div>
                     <div class="nav-title">
-                        <a href="#"><p class="p-md bold color-text">e-commerce</p></a>
+                        <a href="index.html"><p class="p-md bold color-text">e-commerce</p></a>
                     </div>
                 </div>
                 <div class="flex-icon">
@@ -30,14 +30,14 @@
                         <img src="./images/heart 1.svg" alt="" class="icon-width">
                     </div>
                     <div class="icon-car padding-box-icon">
-                        <img src="./images/shopping-cart 3.svg" alt="" class="icon-width">
+                        <button onclick="celToggle()"><img src="./images/shopping-cart 3.svg" alt="" class="icon-width"></button>
                     </div>
                 </div>
             </div>
-            <!---------------- Menu option --------------->
+            <!---------------- Menu option Celphone --------------->
             <div class="box-menu hidden-one" id="menu-id">
                 <div class="x">
-                    <button onclick="navToggle()"><img src="./images/x.svg" alt="" class="icon-width"></button>
+                    <button onclick="navToggle()" id="btn-x-one"><img src="./images/x.svg" alt="" class="icon-width"></button>
                 </div>
                 <div class="option-menu">
                     <p class="padding-05 bold">Ménu</p>
@@ -50,14 +50,22 @@
                 </div>
             </div>
             <!----------------- Car option ---------------->
-            <div class="car-option">
-
+            <div class="car-option hidden-two" id="celu-option">
+                <div class="car-all">
+                    <div class="x">
+                        <button onclick="celToggle()" id="btn-x-two"><img src="./images/x.svg" alt="" class="icon-width"></button>
+                    </div>
+                    <h3>Carrito de compras</h3>
+                    <div id="mini-card">
+                        
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
     <!------------------- Filter search ------------------------>
     <div class="container">
-        <form action="" id="filter">
+        <form action="" id="filter" onsubmit="event.preventDefault(), add()">
             <input type="text" placeholder="¿Qué producto estás buscando?" id="input-filter">
             <button class="btn"><img src="./images/search 1.svg" alt=""></button>
         </form>

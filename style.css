@@ -80,6 +80,9 @@ button {
     display: none;
 }
 
+.hidden-two {
+    display: none;
+}
 /***************** Navegation ***************/
 
 header {
@@ -130,6 +133,26 @@ nav {
 
 .x {
     text-align: right;
+}
+
+.car-option {
+    background-color: #fff;
+    height: auto;
+    right: 0;
+    left: 10rem;
+    top: 0;
+    position: absolute;
+    padding: 2rem 1.3rem;
+}
+
+.car-img img {
+    width: 4rem;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 30px;
+    margin-top: 2rem;
 }
 
 /*********************** Filter *************************/

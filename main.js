@@ -48,9 +48,9 @@ function generateCard(array) {
                                 <p class="bold color-text">PRECIO</p>
                                 <p>${array[i].price}$</p>
                             </div>
-                            <button>                        
+                            <button onclick="searchId(${array[i].id})">                        
                                 <div class="card-car">
-                                    <img src="./images/shopping-cart 3.svg" alt="icon-car">
+                                <img src="./images/shopping-cart 3.svg" alt="icon-car">
                                 </div>
                             </button>
                         </div>
@@ -72,7 +72,7 @@ function total(longitud) {
 
 total(longitud);
 
-// Filter of Samsung
+//////////////////////////////////////// Filter menu
 const btnn = document.querySelector("#btnn");
 btnn.addEventListener("click",() => {
         generateCard(cel)
@@ -139,8 +139,75 @@ btnFive.addEventListener("click",() => {
     })
 })
 
-// Menu
+///////////////////////////////////////// Menu
 function navToggle() {
     const menu = document.querySelector("#menu-id");
     menu.classList.toggle("hidden-one")
+}
+
+//////////////////////////////////////////////// Filter input
+
+
+
+function searchFilter(element) {
+    const input = document.querySelector("#input-filter").value
+    const valueInput = input.toUpperCase()
+    const e = element.brand.toUpperCase()
+    const eOne = element.model.toUpperCase()
+    return valueInput == e || e.includes(valueInput) || eOne.includes(valueInput) 
+}
+
+function filter(array, cb) {
+    let result = [];
+    for(let i = 0; i < array.length; i++) {
+        let comparation = cb(array[i])
+        if(comparation) {
+            result.push(array[i])
+            total(result.length)
+        }
+    }
+    return result
+}
+
+function add() {
+    let ar = filter(cel, searchFilter);
+    generateCard(ar)
+}
+
+//////////////////////////////// Car
+
+function celToggle() {
+    const celu = document.querySelector("#celu-option")
+    celu.classList.toggle("hidden-two")
+}
+
+function generateMiniCard(array) {
+    let html = "";
+    const miniCard = document.querySelector("#mini-card")
+    for(let i = 0; i < array.length; i++) {
+        html += `<div class="car-grid">
+                    <div class="car-img">
+                        <img src="${array[i].img}" alt="">
+                    </div>
+                    <div class="car-info">
+                        <p class="color-text bold">${array[i].brand}</p>
+                        <p class="p-small">${array[i].model}</p>
+                    </div>
+                    <div class="icon-papeleria">
+                        <img src="./images/papelera.svg" alt="" class="icon-width">
+                    </div>
+                </div>`
+    }
+    miniCard.innerHTML = html;
+}
+
+let resultCar = [];
+
+function searchId(id) {
+    for(let i = 0; i < cel.length; i++) {
+        if(id == cel[i].id) {
+            resultCar.push(cel[i])
+            generateMiniCard(resultCar)
+        }
+    }
 }
