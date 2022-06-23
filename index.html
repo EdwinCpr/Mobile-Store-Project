@@ -1,86 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./mediaQuery.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mediaQuery.css" />
+  </head>
+  <body>
     <!------------------------- Navegation ------------------------>
     <header>
-        <nav id="nav-all">
-            <div class="flex-all">
-                <div class="flex-title">
-                    <div class="nav-menu">
-                        <button onclick="navToggle()"><img src="./images/menu 1.svg" alt="" class="icon-width"></button>
-                    </div>
-                    <div class="nav-title">
-                        <a href="index.html"><p class="p-md bold color-text">e-commerce</p></a>
-                    </div>
-                </div>
-                <div class="flex-icon">
-                    <div class="icon-user padding-box-icon">
-                        <img src="./images/user 2.svg" alt="" class="icon-width">
-                    </div>
-                    <div class="icon-heart padding-box-icon">
-                        <img src="./images/heart 1.svg" alt="" class="icon-width">
-                    </div>
-                    <div class="icon-car padding-box-icon">
-                        <button onclick="celToggle()"><img src="./images/shopping-cart 3.svg" alt="" class="icon-width"></button>
-                    </div>
-                </div>
+      <nav id="nav-all">
+        <div class="flex-all">
+          <div class="flex-title">
+            <div class="nav-menu">
+              <button onclick="navToggle()">
+                <img src="./images/menu 1.svg" alt="" class="icon-width" />
+              </button>
             </div>
-            <!---------------- Menu option Celphone --------------->
-            <div class="box-menu hidden-one" id="menu-id">
-                <div class="x">
-                    <button onclick="navToggle()" id="btn-x-one"><img src="./images/x.svg" alt="" class="icon-width"></button>
-                </div>
-                <div class="option-menu">
-                    <p class="padding-05 bold">Ménu</p>
-                    <button class="d-block border-bottom" id="btnn" value="Huawei Samsung LG Xiaomi Motorola"><p class="padding-05 text-align-left">Todos</p></button>
-                    <button class="margintop-1 d-block border-bottom" id="btn-one" value="Samsung"><p class="padding-05 text-align-left">Samsung</p></button>
-                    <button class="margintop-1 d-block border-bottom" id="btn-two" value="Huawei"><p class="padding-05 text-align-left">Huawei</p></button>
-                    <button class="margintop-1 d-block border-bottom" id="btn-three" value="Motorola"><p class="padding-05 text-align-left">Motorola</p></button>
-                    <button class="margintop-1 d-block border-bottom" id="btn-four" value="Xiaomi"><p class="padding-05 text-align-left">Xiaomi</p></button>
-                    <button class="margintop-1 d-block border-bottom" id="btn-five" value="LG"><p class="padding-05 text-align-left">LG</p></button>   
-                </div>
+            <div class="nav-title">
+              <a href="index.html"
+                ><p class="p-md bold color-text">e-commerce</p></a
+              >
             </div>
-            <!----------------- Car option ---------------->
-            <div class="car-option hidden-two" id="celu-option">
-                <div class="car-all">
-                    <div class="x">
-                        <button onclick="celToggle()" id="btn-x-two"><img src="./images/x.svg" alt="" class="icon-width"></button>
-                    </div>
-                    <h3>Carrito de compras</h3>
-                    <div id="mini-card">
-                        
-                    </div>
-                </div>
+          </div>
+          <div class="flex-icon">
+            <div class="icon-user padding-box-icon">
+              <img src="./images/user 2.svg" alt="" class="icon-width" />
             </div>
-        </nav>
+            <div class="icon-heart padding-box-icon">
+              <img src="./images/heart 1.svg" alt="" class="icon-width" />
+            </div>
+            <div class="icon-car padding-box-icon">
+              <button onclick="celToggle()">
+                <img
+                  src="./images/shopping-cart 3.svg"
+                  alt=""
+                  class="icon-width"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!---------------- Menu option Celphone --------------->
+        <div class="box-menu hidden-one" id="menu-id">
+          <div class="x">
+            <button onclick="navToggle()" id="btn-x-one">
+              <img src="./images/x.svg" alt="" class="icon-width" />
+            </button>
+          </div>
+          <div class="option-menu">
+            <p class="padding-05 bold">Ménu</p>
+            <button
+              class="d-block border-bottom"
+              id="btnn"
+              value="Huawei Samsung LG Xiaomi Motorola"
+            >
+              <p class="padding-05 text-align-left">Todos</p>
+            </button>
+            <button
+              class="margintop-1 d-block border-bottom"
+              id="btn-one"
+              value="Samsung"
+            >
+              <p class="padding-05 text-align-left">Samsung</p>
+            </button>
+            <button
+              class="margintop-1 d-block border-bottom"
+              id="btn-two"
+              value="Huawei"
+            >
+              <p class="padding-05 text-align-left">Huawei</p>
+            </button>
+            <button
+              class="margintop-1 d-block border-bottom"
+              id="btn-three"
+              value="Motorola"
+            >
+              <p class="padding-05 text-align-left">Motorola</p>
+            </button>
+            <button
+              class="margintop-1 d-block border-bottom"
+              id="btn-four"
+              value="Xiaomi"
+            >
+              <p class="padding-05 text-align-left">Xiaomi</p>
+            </button>
+            <button
+              class="margintop-1 d-block border-bottom"
+              id="btn-five"
+              value="LG"
+            >
+              <p class="padding-05 text-align-left">LG</p>
+            </button>
+          </div>
+        </div>
+        <!----------------- Car option ---------------->
+        <div class="car-option hidden-two" id="celu-option">
+          <div class="car-all">
+            <div class="x">
+              <button onclick="celToggle()" id="btn-x-two">
+                <img src="./images/x.svg" alt="" class="icon-width" />
+              </button>
+            </div>
+            <h3>Carrito de compras</h3>
+            <div id="mini-card"></div>
+          </div>
+        </div>
+      </nav>
     </header>
     <!------------------- Filter search ------------------------>
     <div class="container">
-        <form action="" id="filter" onsubmit="event.preventDefault(), add()">
-            <input type="text" placeholder="¿Qué producto estás buscando?" id="input-filter">
-            <button class="btn"><img src="./images/search 1.svg" alt=""></button>
-        </form>
-    <!--------------------- Products ------------------------>
-        <div class="card-products">
-            <div id="total-products">
-
-            </div>
-            <div id="card-all">
-            </div>
-        </div>
+      <form action="" id="filter" onsubmit="event.preventDefault(), add()">
+        <input
+          type="text"
+          placeholder="¿Qué producto estás buscando?"
+          id="input-filter"
+        />
+        <button class="btn"><img src="./images/search 1.svg" alt="" /></button>
+      </form>
+      <!--------------------- Products ------------------------>
+      <div class="card-products">
+        <div id="total-products"></div>
+        <div id="card-all"></div>
+      </div>
     </div>
     <script src="./main.js"></script>
-
-
-
-</body>
+  </body>
 </html>

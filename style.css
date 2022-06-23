@@ -1,231 +1,238 @@
 /******************** Universal *********************/
 
-html { 
-    box-sizing:border-box;
-    font-size: 62.5%;
-    font-family: 'Yantramanav', sans-serif;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Yantramanav", sans-serif;
 }
-  
-body{
-    font-size: 1.6rem; 
+
+body {
+  font-size: 1.6rem;
 }
-  
-*, *:before, *:after{
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 .icon-width {
-    width: 2rem;
+  width: 2rem;
 }
 
 .p-small {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .p-md {
-    font-size: 2.5rem;   
+  font-size: 2.5rem;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button {
-    background: transparent;
-    border: 0;
-    cursor: pointer;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .container {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 .red {
-    color: red;
+  color: red;
 }
 
 .color-text {
-    color: rgb(125, 195, 236);
+  color: rgb(125, 195, 236);
 }
 
 .padding-05 {
-    padding: 0.5rem 0;
+  padding: 0.5rem 0;
 }
 
 .border-bottom {
-    border-bottom: 1px solid;
+  border-bottom: 1px solid;
 }
 
 .d-block {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .text-align-left {
-    text-align: left;
+  text-align: left;
 }
 
 .margintop-1 {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .hidden-one {
-    display: none;
+  display: none;
 }
 
 .hidden-two {
-    display: none;
+  display: none;
 }
+
+.hidden-three {
+  display: none;
+}
+
 /***************** Navegation ***************/
 
 header {
-    background-color: rgb(32, 51, 68);
-    padding: 1rem 0rem;
+  background-color: rgb(32, 51, 68);
+  padding: 1rem 0rem;
 }
 
 nav {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 .flex-all {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .flex-title {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-.nav-title p{
-    padding-bottom: .80rem;
+.nav-title p {
+  padding-bottom: 0.8rem;
 }
 
 .flex-icon {
-    display: flex;
-    gap: 2.5rem;
-    align-items: flex-end;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-end;
 }
 
 .box-menu {
-    background-color: #fff;
-    padding: 1.5rem 2rem;
-    position: absolute;
-    left: 0%;
-    right: 45%;
-    top: 0;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  left: 0%;
+  right: 45%;
+  top: 0;
 }
 
 .option-menu {
-    text-align: left;
+  text-align: left;
 }
 
 .x {
-    text-align: right;
+  text-align: right;
 }
 
 .car-option {
-    background-color: #fff;
-    height: auto;
-    right: 0;
-    left: 10rem;
-    top: 0;
-    position: absolute;
-    padding: 2rem 1.3rem;
+  background-color: #fff;
+  height: auto;
+  right: 0;
+  left: 10rem;
+  top: 0;
+  position: absolute;
+  padding: 2rem 1.3rem;
 }
 
 .car-img img {
-    width: 4rem;
+  width: 4rem;
 }
 
 .car-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 30px;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 30px;
+  margin-top: 2rem;
 }
 
 /*********************** Filter *************************/
 
 #filter {
-    padding: 2rem 0rem;
-    width: 29rem;
-    margin: auto;
-    display: flex;
+  padding: 2rem 0rem;
+  width: 29rem;
+  margin: auto;
+  display: flex;
 }
 
 #input-filter {
-    width: 100%;
-    outline: none;
-    padding: 0rem 2.5rem;
+  width: 100%;
+  outline: none;
+  padding: 0rem 2.5rem;
 }
 
 .btn {
-    background-color: rgb(32, 51, 68);
-    padding: .70rem 1rem;
+  background-color: rgb(32, 51, 68);
+  padding: 0.7rem 1rem;
 }
 
 /********************** Products ************************/
 
 .card-products {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 #card-all {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    padding: 1rem 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0rem;
 }
 
 .card {
-    padding: 2rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 30rem;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30rem;
 }
 
 .heart {
-    text-align: right;
+  text-align: right;
 }
 
 .img-cel {
-    text-align: center;
+  text-align: center;
 }
 
 .card-info {
-    border-top: 1px solid rgb(32, 51, 68);
-    padding: 1rem 0rem;
+  border-top: 1px solid rgb(32, 51, 68);
+  padding: 1rem 0rem;
 }
 
 .card-price {
-    padding: 1rem 0rem;
+  padding: 1rem 0rem;
 }
 
 .flex-price {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-car {
-    background-color: rgb(32, 51, 68);
-    border-radius: 100%;
-    width: 4.5rem;
-    height: 4.5rem;
+  background-color: rgb(32, 51, 68);
+  border-radius: 100%;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 .card-car img {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
