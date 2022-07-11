@@ -6,7 +6,7 @@ let cel = [
     price: 200,
     img: "./images/image 1.jpg",
     category: "Samsung",
-    count: 0,
+    count: 1
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ let cel = [
     price: 280,
     img: "./images/xiaomiReadmi9C.png",
     category: "Xiaomi",
-    count: 0,
+    count: 1
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ let cel = [
     price: 150,
     img: "./images/LGK41s.png",
     category: "LG",
-    count: 0,
+    count: 1
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ let cel = [
     price: 300,
     img: "./images/MotorolaMotoG200.png",
     category: "Motorola",
-    count: 0,
+    count: 1
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ let cel = [
     price: 220,
     img: "./images/image 3.jpg",
     category: "Samsung",
-    count: 0,
+    count: 1
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ let cel = [
     price: 600,
     img: "./images/xiaomiReadmiNote10.png",
     category: "Xiaomi",
-    count: 0,
+    count: 1
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ let cel = [
     price: 95,
     img: "./images/LGK62.png",
     category: "LG",
-    count: 0,
+    count: 1
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ let cel = [
     price: 500,
     img: "./images/HuaweiP40.png",
     category: "Huawei",
-    count: 0,
+    count: 1
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ let cel = [
     price: 310,
     img: "./images/MotoG60s.png",
     category: "Motorola",
-    count: 0,
+    count: 1
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ let cel = [
     price: 110,
     img: "./images/image 4.jpg",
     category: "Samsung",
-    count: 0,
+    count: 1
   },
   {
     id: 11,
@@ -96,7 +96,7 @@ let cel = [
     price: 80,
     img: "./images/xiaomiReadmi9A.png",
     category: "Xiaomi",
-    count: 0,
+    count: 1
   },
   {
     id: 12,
@@ -105,7 +105,7 @@ let cel = [
     price: 80,
     img: "./images/LGK51S.png",
     category: "LG",
-    count: 0,
+    count: 1
   },
   {
     id: 13,
@@ -114,7 +114,7 @@ let cel = [
     price: 370,
     img: "./images/MotorolaEdge20PRO.png",
     category: "Motorola",
-    count: 0,
+    count: 1
   },
   {
     id: 14,
@@ -123,7 +123,7 @@ let cel = [
     price: 35,
     img: "./images/image 13.jpg",
     category: "Samsung",
-    count: 0,
+    count: 1
   },
   {
     id: 15,
@@ -132,7 +132,7 @@ let cel = [
     price: 412,
     img: "./images/xiaomiPOCOX4.png",
     category: "Xiaomi",
-    count: 0,
+    count: 1
   },
   {
     id: 16,
@@ -141,7 +141,7 @@ let cel = [
     price: 341,
     img: "./images/LGVelvet128GB.png",
     category: "LG",
-    count: 0,
+    count: 1
   },
   {
     id: 17,
@@ -150,7 +150,7 @@ let cel = [
     price: 342,
     img: "./images/HuaweiMate30PRO.png",
     category: "Huawei",
-    count: 0,
+    count: 1
   },
   {
     id: 18,
@@ -159,7 +159,7 @@ let cel = [
     price: 441,
     img: "./images/MotorolaG71.png",
     category: "Motorola",
-    count: 0,
+    count: 1
   },
   {
     id: 19,
@@ -168,7 +168,7 @@ let cel = [
     price: 340,
     img: "./images/image 14.jpg",
     category: "Samsung",
-    count: 0,
+    count: 1
   },
   {
     id: 20,
@@ -177,7 +177,7 @@ let cel = [
     price: 220,
     img: "./images/xiaomiReadmiNOTE11.png",
     category: "Xiaomi",
-    count: 0,
+    count: 1
   },
   {
     id: 21,
@@ -186,7 +186,7 @@ let cel = [
     price: 190,
     img: "./images/image 15.jpg",
     category: "Samsung",
-    count: 0,
+    count: 1
   },
   {
     id: 22,
@@ -195,7 +195,7 @@ let cel = [
     price: 90,
     img: "./images/MotorolaMotoG31.png",
     category: "Motorola",
-    count: 0,
+    count: 1
   },
   {
     id: 23,
@@ -204,7 +204,7 @@ let cel = [
     price: 180,
     img: "./images/HuaweiP50PRO.png",
     category: "Huawei",
-    count: 0,
+    count: 1
   },
   {
     id: 24,
@@ -213,9 +213,11 @@ let cel = [
     price: 550,
     img: "./images/image 16.jpg",
     category: "Samsung",
-    count: 0,
-  },
+    count: 1
+  }
 ];
+
+let local = JSON.parse(localStorage.getItem("storage")) || [];
 
 function generateCard(array) {
   let html = "";
@@ -339,30 +341,18 @@ function navToggle() {
 
 //////////////////////////////////////////////// Filter input
 
-function searchFilter(element) {
-  const input = document.querySelector("#input-filter").value;
-  const valueInput = input.toUpperCase();
-  const e = element.brand.toUpperCase();
-  const eOne = element.model.toUpperCase();
-  return valueInput == e || e.includes(valueInput) || eOne.includes(valueInput);
-}
-
-function filter(array, cb) {
-  let result = [];
-  for (let i = 0; i < array.length; i++) {
-    let comparation = cb(array[i]);
-    if (comparation) {
-      result.push(array[i]);
-      total(result.length);
-    }
-  }
-  return result;
-}
-
 function add() {
-  let ar = filter(cel, searchFilter);
+  let ar = cel.filter((element) => {
+    const input = document.querySelector("#input-filter").value;
+    const valueInput = input.toUpperCase();
+    const e = element.brand.toUpperCase();
+    const eOne = element.model.toUpperCase();
+    return (
+      valueInput == e || e.includes(valueInput) || eOne.includes(valueInput)
+    );
+  });
+  total(ar.length);
   generateCard(ar);
-  console.log(filter.lenght);
 }
 
 //////////////////////////////// Car
@@ -383,6 +373,7 @@ function generateMiniCard(array) {
                     <div class="car-info">
                         <p class="color-text bold">${array[i].brand}</p>
                         <p class="p-small">${array[i].model}</p>
+                        <p class="p-small">${array[i].count}</p>
                     </div>
                     <div class="icon-papeleria">
                     <button onclick="deleteProduct(${array[i].id})"><img src="./images/papelera.svg" alt="" class="icon-width"></button>
@@ -392,39 +383,24 @@ function generateMiniCard(array) {
   miniCard.innerHTML = html;
 }
 
-let local = JSON.parse(localStorage.getItem("storage")) || [];
-generateMiniCard(local);
-
 function searchID(id) {
-  console.log(id);
-  function callback(element) {
-    return element.id == id;
+  function call(element) {
+    return element.id === id;
   }
-
-  function find(array, cb) {
-    for (let i = 0; i < array.length; i++) {
-      let res = cb(array[i]);
-      if (res) {
-        if (array[i].count == 0) {
-          array[i].count = 1;
-          local.push(array[i])
-          generateMiniCard(local)
-          localStorage.setItem("storage", JSON.stringify(local));
-        } else {
-          console.log("Ya existe");
-        }
+  const existe = local.some((prod) => prod.id === id);
+  if (existe) {
+    const prod = local.map(prod => {
+      if(prod.id === id) {
+        prod.count++
+        generateMiniCard(local)
       }
-    }
+    })
+  } else {
+    let result = cel.find(call);
+    local.push(result);
+    generateMiniCard(local);
   }
-  let ar = find(cel, callback);
+  localStorage.setItem("storage", JSON.stringify(local));
 }
-
-// function deleteProduct(id) {
-//     for(let i = 0; i < local.length; i++) {
-//         if(id == local[i].id) {
-//             let arr = local.splice(id,1)
-//             generateMiniCard(local)
-//             localStorage.setItem("storage",JSON.stringify(local))
-//         }
-//     }
-// }
+generateMiniCard(local);
+console.log(local.length);

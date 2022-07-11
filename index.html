@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./mediaQuery.css" />
   </head>
@@ -24,9 +21,7 @@
               </button>
             </div>
             <div class="nav-title">
-              <a href="index.html"
-                ><p class="p-md bold color-text">e-commerce</p></a
-              >
+              <a href="index.html"><p class="p-md bold color-text">e-commerce</p></a>
             </div>
           </div>
           <div class="flex-icon">
@@ -38,10 +33,7 @@
             </div>
             <div class="icon-car padding-box-icon">
               <button onclick="celToggle()">
-                <img
-                  src="./images/shopping-cart 3.svg"
-                  alt=""
-                  class="icon-width"
+                <img src="./images/shopping-cart 3.svg" alt="" class="icon-width"
                 />
               </button>
             </div>
@@ -56,53 +48,29 @@
           </div>
           <div class="option-menu">
             <p class="padding-05 bold">Ménu</p>
-            <button
-              class="d-block border-bottom"
-              id="btnn"
-              value="Huawei Samsung LG Xiaomi Motorola"
-            >
+            <button class="d-block border-bottom" id="btnn" value="Huawei Samsung LG Xiaomi Motorola">
               <p class="padding-05 text-align-left">Todos</p>
             </button>
-            <button
-              class="margintop-1 d-block border-bottom"
-              id="btn-one"
-              value="Samsung"
-            >
+            <button class="margintop-1 d-block border-bottom" id="btn-one" value="Samsung">
               <p class="padding-05 text-align-left">Samsung</p>
             </button>
-            <button
-              class="margintop-1 d-block border-bottom"
-              id="btn-two"
-              value="Huawei"
-            >
+            <button class="margintop-1 d-block border-bottom" id="btn-two" value="Huawei">
               <p class="padding-05 text-align-left">Huawei</p>
             </button>
-            <button
-              class="margintop-1 d-block border-bottom"
-              id="btn-three"
-              value="Motorola"
-            >
+            <button class="margintop-1 d-block border-bottom" id="btn-three" value="Motorola">
               <p class="padding-05 text-align-left">Motorola</p>
             </button>
-            <button
-              class="margintop-1 d-block border-bottom"
-              id="btn-four"
-              value="Xiaomi"
-            >
+            <button class="margintop-1 d-block border-bottom" id="btn-four" value="Xiaomi">
               <p class="padding-05 text-align-left">Xiaomi</p>
             </button>
-            <button
-              class="margintop-1 d-block border-bottom"
-              id="btn-five"
-              value="LG"
-            >
+            <button class="margintop-1 d-block border-bottom" id="btn-five" value="LG">
               <p class="padding-05 text-align-left">LG</p>
             </button>
           </div>
         </div>
         <!----------------- Car option ---------------->
         <div class="car-option hidden-two" id="celu-option">
-          <div class="car-all">
+          <div class="card-all">
             <div class="x">
               <button onclick="celToggle()" id="btn-x-two">
                 <img src="./images/x.svg" alt="" class="icon-width" />
@@ -117,11 +85,7 @@
     <!------------------- Filter search ------------------------>
     <div class="container">
       <form action="" id="filter" onsubmit="event.preventDefault(), add()">
-        <input
-          type="text"
-          placeholder="¿Qué producto estás buscando?"
-          id="input-filter"
-        />
+        <input type="text" placeholder="¿Qué producto estás buscando?" id="input-filter"/>
         <button class="btn"><img src="./images/search 1.svg" alt="" /></button>
       </form>
       <!--------------------- Products ------------------------>
@@ -133,3 +97,44 @@
     <script src="./main.js"></script>
   </body>
 </html>
+
+<!-- const card = document.getElementById(card-all)
+
+cel.forEach((producto) => {
+  
+}) -->
+
+
+
+
+
+
+
+
+<!-- `<div class="card">
+  <div class="card-all">
+      <div class="heart">
+          <img src="./images/heart 1 - copia.svg" alt="" class="icon-width">
+      </div>                 
+      <div class="img-cel">
+          <img src="${array[i].img}" alt="">
+      </div>
+  </div>
+  <div class="card-info">
+      <div class="card-brand">
+          <p class="bold color-text">${array[i].brand}</p>
+          <p class="p-small">${array[i].model}</p>
+      </div>
+      <div class="flex-price">
+          <div class="card-price">
+              <p class="bold color-text">PRECIO</p>
+              <p>${array[i].price}$</p>
+          </div>
+          <button id="${array[i].id}">                        
+              <div class="card-car">
+              <img src="./images/shopping-cart 3.svg" alt="icon-car">
+              </div>
+          </button>
+      </div>
+  </div>
+</div>` -->
