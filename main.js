@@ -424,8 +424,12 @@ function btnBuy() {
     alert("No tienes articulos en el carrito")
   } else {
     alert(`Has comprado ${local.length} articulo`)
-    local.splice(0, lon)
+    for(let i = 0; i < local.length; i++) {
+      local[i].count = 1;
+    }
+    local.splice(0,lon)
     generateMiniCard(local)
+    localStorage.setItem("storage", JSON.stringify(local));
   }
 }
 
