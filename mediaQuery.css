@@ -4,6 +4,7 @@
 
     header {
         padding: 0rem;
+        position: relative;
     }
 
     nav {
@@ -19,7 +20,7 @@
     }
 
     .car-option {
-        left: 98rem;
+        width: 35rem;
     }
 
     /****************** Navegation ********************/

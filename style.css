@@ -122,7 +122,8 @@ nav {
 }
 
 .box-menu {
-  background-color: #fff;
+  background-color: rgb(32, 51, 68);
+  color: white;
   padding: 1.5rem 2rem;
   position: absolute;
   left: 0%;
@@ -134,6 +135,10 @@ nav {
   text-align: left;
 }
 
+.option-menu button {
+  color: white;
+}
+
 .x {
   text-align: right;
 }
@@ -141,11 +146,12 @@ nav {
 .car-option {
   background-color: #fff;
   height: auto;
-  right: 0;
-  left: 10rem;
-  top: 0;
+  right: 0rem;
+  top: 0rem;
+  width: 25rem;
   position: absolute;
   padding: 2rem 1.3rem;
+  border: 1px solid black;
 }
 
 .car-img img {
@@ -231,4 +237,17 @@ nav {
 
 .card-car img {
   padding-top: 1rem;
+}
+
+#mini-card-btn {
+  text-align: center;
+}
+
+.btn-buy {
+  background-color: rgb(32, 51, 68);
+  width: 90%;
+  padding: 1rem;
+  border: 1px solid black;
+  margin-top: 2rem;
+  color: white;
 }

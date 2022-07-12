@@ -242,7 +242,7 @@ function generateCard(array) {
                                 <p class="bold color-text">PRECIO</p>
                                 <p>${array[i].price}$</p>
                             </div>
-                            <button onclick="searchID(${array[i].id})">                        
+                            <button onclick="addProduct(${array[i].id})">                        
                                 <div class="card-car">
                                 <img src="./images/shopping-cart 3.svg" alt="icon-car">
                                 </div>
@@ -275,7 +275,7 @@ btnn.addEventListener("click", () => {
 
 const btnOne = document.querySelector("#btn-one");
 btnOne.addEventListener("click", () => {
-  let result = [];
+  const result = [];
   cel.filter((i) => {
     if (i.category == btnOne.value) {
       result.push(i);
@@ -287,7 +287,7 @@ btnOne.addEventListener("click", () => {
 
 const btnTwo = document.querySelector("#btn-two");
 btnTwo.addEventListener("click", () => {
-  let result = [];
+  const result = [];
   cel.filter((i) => {
     if (i.category == btnTwo.value) {
       result.push(i);
@@ -299,7 +299,7 @@ btnTwo.addEventListener("click", () => {
 
 const btnThree = document.querySelector("#btn-three");
 btnThree.addEventListener("click", () => {
-  let result = [];
+  const result = [];
   cel.filter((i) => {
     if (i.category == btnThree.value) {
       result.push(i);
@@ -311,7 +311,7 @@ btnThree.addEventListener("click", () => {
 
 const btnFour = document.querySelector("#btn-four");
 btnFour.addEventListener("click", () => {
-  let result = [];
+  const result = [];
   cel.filter((i) => {
     if (i.category == btnFour.value) {
       result.push(i);
@@ -323,7 +323,7 @@ btnFour.addEventListener("click", () => {
 
 const btnFive = document.querySelector("#btn-five");
 btnFive.addEventListener("click", () => {
-  let result = [];
+  const result = [];
   cel.filter((i) => {
     if (i.category == btnFive.value) {
       result.push(i);
@@ -380,27 +380,56 @@ function generateMiniCard(array) {
                     </div>
                 </div>`;
   }
+  generatePrice()
   miniCard.innerHTML = html;
 }
 
-function searchID(id) {
+function addProduct(id) {
   function call(element) {
     return element.id === id;
   }
-  const existe = local.some((prod) => prod.id === id);
-  if (existe) {
-    const prod = local.map(prod => {
-      if(prod.id === id) {
-        prod.count++
-        generateMiniCard(local)
+  const exists = local.some((prod) => prod.id === id);
+  if (exists) {
+    const prod = local.map((prod) => {
+      if (prod.id === id) {
+        prod.count++;
+        generateMiniCard(local);
       }
-    })
+    });
   } else {
-    let result = cel.find(call);
+    const result = cel.find(call);
     local.push(result);
     generateMiniCard(local);
   }
   localStorage.setItem("storage", JSON.stringify(local));
 }
+
 generateMiniCard(local);
-console.log(local.length);
+
+function deleteProduct(id) {
+  function call(element) {
+    return element.id == id;
+  }
+  const result = local.find(call);
+  result.count = 1
+  const deleteIndex = local.indexOf(result);
+  const delet = local.splice(deleteIndex, 1);
+  localStorage.setItem("storage", JSON.stringify(local));
+  generateMiniCard(local)
+}
+
+function btnBuy() {
+  const lon = local.length;
+  if(local.length === 0) {
+    alert("No tienes articulos en el carrito")
+  } else {
+    alert(`Has comprado ${local.length} articulo`)
+    local.splice(0, lon)
+    generateMiniCard(local)
+  }
+}
+
+function generatePrice() {
+const precioTotal = document.getElementById("precioTotal")
+precioTotal.innerText = local.reduce((acc, prod) => acc + prod.count * prod.price, 0)
+}
